@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="navbar">
+    <div class="logo-container">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="Logo" class="logo-img">
+        </a>
+        <p class="brand-name">Shoesport</p>
+    </div>
+    <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Orders</a>
+    </nav>
+    <div class="nav-icons">
+        <i class="fas fa-sign-out-alt"></i>
+    </div>
+</header>
+
+<!-- Admin Product Form -->
+<section class="product-section">
+    <h2>Add Product</h2>
+    <form id="productForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="productDescription" placeholder="Description" required>
+        <input type="number" id="productQuantity" placeholder="Quantity" required>
+        <input type="number" id="productPrice" placeholder="Price" step="0.01" required>
+        <input type="text" id="productImage" placeholder="Image URL" required>
+        <button type="submit" class="shop-btn">Add Product</button>
+    </form>
+</section>
+
+<!-- Product List -->
+<section class="product-section">
+    <h2>Manage Products</h2>
+    <div id="adminProductList" class="product-list"></div>
+</section>
+
+<!-- Edit Product Modal -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Edit Product</h2>
+        <form id="editForm">
+            <input type="hidden" id="editProductId">
+            <label for="editProductName">Product Name:</label>
+            <input type="text" id="editProductName" required>
+            <label for="editProductDescription">Description:</label>
+            <input type="text" id="editProductDescription" required>
+            <label for="editProductQuantity">Quantity:</label>
+            <input type="number" id="editProductQuantity" required>
+            <label for="editProductPrice">Price:</label>
+            <input type="number" id="editProductPrice" step="0.01" required>
+            <label for="editProductImage">Image URL:</label>
+            <input type="text" id="editProductImage" required>
+            <button type="submit">Save Changes</button>
+            
+        </form>
+    </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

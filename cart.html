@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <img src="img/logo.png" alt="logo" class="logo-img">
+        <p class="brand-name">Shoesport</p>
+        <nav>
+            <a href="user.html">Home</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="nav-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()">
+                <i class="fas fa-search"></i>
+            </div>
+            <a href="cart.html" id="cartLink"><i id="cartIcon" class="fas fa-shopping-cart"></i></a>
+            <a href="wishlist.html"><i id="wishlistIcon" class="fa-solid fa-heart"></i></a>
+            <a href="account.html"><i id="accountIcon" class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cartItems"></div>
+        <p id="cartTotal">Total: $0.00</p>
+        <button id="checkoutBtn" onclick="checkout()">Checkout</button>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">×</span>
+            <h2>Checkout</h2>
+            <form id="checkoutForm" onsubmit="confirmCheckout(event)">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="1234567890">
+
+                <label for="payment">Payment Option:</label>
+                <select id="payment" name="payment" required>
+                    <option value="" disabled selected>Select payment option</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Cash on Delivery">Cash on Delivery</option>
+                </select>
+
+                <button type="submit">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+</body>
+</html>
