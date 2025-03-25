@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "id": "7b3c",
+      "username": "Mohammed",
+      "email": "mdshameer41@gmail.com",
+      "password": "sma",
+      "role": "user"
+    },
+    {
+      "id": "99e2",
+      "username": "spartan",
+      "email": "shameermd011@gmail.com",
+      "password": "sam",
+      "role": "admin"
+    },
+    {
+      "id": "5821",
+      "username": "mohammed ",
+      "email": "sam@gmail.com",
+      "password": "sam",
+      "role": "user"
+    },
+    {
+      "id": "0020",
+      "username": "mohammed",
+      "email": "spartan@gmail.com",
+      "password": "sam",
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "name": "Puma",
+      "description": "Men",
+      "quantity": 0,
+      "price": 499,
+      "image": "https://i.postimg.cc/Xq5zxy1G/product-6.jpg",
+      "id": "48d7"
+    }
+  ]
+}

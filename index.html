@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Website - Login & Signup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+
+<div class="container">
+    <!-- Left Side - Form Container -->
+    <div class="form-container">
+
+        <!-- Login Form -->
+        <div id="loginForm"></div>
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email address" required />
+            <div class="password-container">
+                <input type="password" id="loginPassword" placeholder="Password" required />
+                <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+            </div>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up</a></p>
+            <div id="loginMessage"></div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signupForm" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="signupUsername" placeholder="Username" required />
+            <input type="email" id="signupEmail" placeholder="Email address" required />
+            <input type="password" id="signupPassword" placeholder="Password" required />
+            <select id="signupRole">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+            <button onclick="signup()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+            <div id="signupMessage"></div>
+        </div>
+    </div>
+
+    <!-- Right Side - Shopping Cart Image -->
+    <div class="image-container">
+        <img src="img/cart (2).jpg" alt="Shopping Cart">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

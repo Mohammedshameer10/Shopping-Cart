@@ -1,0 +1,161 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+/* Container */
+.container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 16px; 
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side - Form Styling */
+.form-container {
+    width: 50%;
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 2px solid #e0e0e0; /* Light gray dividing line for a clean look */
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Soft background for input fields */
+    color: #333;
+    font-size: 16px;
+}
+
+/* Password Container */
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 18px; /* Slightly larger for easy visibility */
+    color: #4CAF50;
+}
+
+/* Button */
+button {
+    background-color: #4CAF50; /* Primary color from your theme */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Sign Up Link */
+p {
+    font-size: 14px;
+    color: #333; /* Default text color */
+}
+
+p a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Right Side - Image Styling */
+.image-container {
+    width: 50%;
+    padding: 0; /* Remove padding to let the image fill the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container while maintaining aspect ratio */
+    border-radius: 0 16px 16px 0; /* Match the container's border-radius on the right side */
+    box-shadow: none; /* Remove shadow since the image fills the container */
+}
+
+/* Error Message */
+#loginMessage, #signupMessage {
+    color: #f44336; /* Red for error messages */
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Focus and Hover States */
+input:focus, select:focus {
+    border-color: #4CAF50; /* Highlight inputs with your primary color */
+    outline: none;
+    background-color: #eafaf2; /* Light background on focus */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+
+    .form-container, .image-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .image-container {
+        padding: 0; /* Ensure no padding in responsive view */
+        height: 300px; /* Set a specific height for the image container in mobile view */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 16px 16px; /* Adjust border-radius for mobile view */
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="user.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo" class="logo-img">
+            <h1 class="brand-name">Shoesport</h1>
+        </div>
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+        <nav>
+            <a href="user.html">Home</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+        <div class="nav-icons">
+            <i class="fas fa-user" id="accountIcon" title="Account"></i>
+            <div id="accountDropdown" class="dropdown">
+                <p id="accountUsername"></p>
+                <p id="accountEmail"></p>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+        </div>
+    </header>
+
+    <!-- Wishlist Section -->
+    <section class="wishlist-section">
+        <h2>Your Wishlist</h2>
+        <div id="wishlistItems" class="wishlist-items"></div>
+    </section>
+
+   
+
+    <script src="wishlist.js"></script>
+</body>
+</html>
